@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>COVID-19 – Générateur NON OFFICIEL d'attestation de déplacement</title>
+    <style>
+      body {
+        max-width: 25rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1ex;
+        padding-right: 1ex;
+      }
+      form {
+        height: 100%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      legend {
+        font-size: 1.5rem;
+        text-align: center;
+        padding-bottom: 0.5rem;
+        width: 4rem;
+      }
+      fieldset { 
+        height: 100%;
+        flex-direction: column;
+        border: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        font-size: 2rem;
+      }
+      fieldset > label {
+        flex-grow: 0;
+        padding: 0.25ex 0.5ex;
+        border: 0.1ex solid #BBBBBB;
+        border-radius: 0.7ex;
+        margin: 0.3ex;
+        text-align: center;
+      }
+      fieldset > input:checked + label {
+        background-color: #BBEEBB;
+        border-color: #00AA00;
+      }
+      fieldset > input:disabled + label {
+        background-color: #DDDDDD;
+        border-color: #999999;
+        opacity: 0.5;
+      }
+      p {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0.5rem;
+      }
+      hr {
+        border-color: #EEEEEE;
+        width: 100%;
+      }
+      ul {
+        width: 100%;
+      }
+      input[type=checkbox], input[type=radio] {
+        display: none;
+      }
+      [type=submit] {
+        font-size: 2rem;
+        border-radius: 0.7ex;
+        padding: 0.25ex 0.5ex;
+        background-color: transparent;
+      }
+      #history {
+        list-style-type: none;
+        margin: 0;
+        padding: 0.25rem 0 0 0;
+      }
+      #history li {
+        margin: 0.75rem;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      #history button {
+        padding: 1ex 0.5ex;
+        font-size: 0.9rem;
+      }
+      #history .recallhistory {
+        text-align: left;
+        margin-right: 1rem;
+        flex-grow: 1;
+      }
+    </style>
+    <link href="./certificate.pdf" rel="certificate">
+</head>
+
+<body>
+
+<form id=form>
+  <fieldset id=who>
+    <legend>Qui</legend>
+  </fieldset>
+  <fieldset id=what>
+    <legend>Quoi</legend>
+  </fieldset>
+  <fieldset id=when>
+    <legend>Quand</legend>
+  </fieldset>
+  <hr>
+  <p id=do>
+    <!-- <button type=submit id=save value=Enregistrer>🎛</button> -->
+    <button type=submit id=raz value=RAZ>🗑</button> 
+    <button type=submit id=show value=Voir>📄</button> 
+    <button type=submit id=print value=Imprimer>🖨</button>
+    <button type=submit id=download value=Télécharger>📥</button>
+  </p>
+</form>
+<hr>
+<ul id="history">
+
+</ul>
+<script src="./index.js"></script>
+</body>
+</html>
