@@ -320,15 +320,15 @@ initForm()
 /*******/
 
 const ys = {
-  travail: 578,
-  achats: 533,
-  sante: 477,
-  famille: 435,
-  handicap: 396,
-  sport_animaux: 358,
-  convocation: 295,
-  missions: 255,
-  enfants: 211,
+  travail: 572,
+  achats: 523,
+  sante: 475,
+  famille: 438,
+  handicap: 402,
+  sport_animaux: 378,
+  convocation: 292,
+  missions: 256,
+  enfants: 232,
 }
 
 export async function generatePdf(profile, reasons, date) {
@@ -371,13 +371,13 @@ export async function generatePdf(profile, reasons, date) {
     page1.drawText(text, { x, y, size, font })
   }
 
-  drawText(`${firstname} ${lastname}`, 119, 696)
-  drawText(birthday, 119, 674)
-  drawText(placeofbirth, 297, 674)
+  drawText(`${firstname} ${lastname}`, 119, 689)
+  drawText(birthday, 119, 670)
+  drawText(placeofbirth, 265, 670)
   drawText(`${address} ${zipcode} ${city}`, 133, 652)
 
   reasons.forEach(reason => {
-    drawText('x', 78, ys[reason], 18)
+    drawText('x', 73, ys[reason], 18)
   })
 
   let locationSize = getIdealFontSize(font, city, 83, 7, 11)
@@ -386,9 +386,9 @@ export async function generatePdf(profile, reasons, date) {
     locationSize = 7
   }
 
-  drawText(city, 105, 177, locationSize)
-  drawText(datesortie, 91, 153, 11)
-  drawText(heuresortie, 264, 153, 11)
+  drawText(city, 110, 197, locationSize)
+  drawText(datesortie, 93, 179, 11)
+  drawText(heuresortie, 285, 179, 11)
 
   const generatedQR = await generateQR(data)
 
