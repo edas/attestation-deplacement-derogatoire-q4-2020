@@ -11,7 +11,7 @@ const peoples = {
     address: "1 rue de la Paix",
     zipcode: "01000",
     city: "Abondance",
-    reasons: ['achats', 'sante', 'sport_animaux', 'enfants'],
+    reasons: ['achats_culturel_culturel', 'sante', 'sport_animaux', 'enfants'],
   },
   maman: {
     emoji: "👩🏻",
@@ -22,7 +22,7 @@ const peoples = {
     address: "1 rue de la Paix",
     zipcode: "01000",
     city: "Abondance",
-    reasons: ['travail', 'achats', 'sante', 'sport_animaux', 'enfants'],
+    reasons: ['travail', 'achats_culturel_culturel', 'sante', 'sport_animaux', 'enfants'],
   },
   enfant: {
     emoji: "👦🏻",
@@ -33,7 +33,7 @@ const peoples = {
     address: "1 rue de la Paix",
     zipcode: "01000",
     city: "Abondance",
-    reasons: ['achats', 'sante', 'sport_animaux', 'enfants'],
+    reasons: ['achats_culturel_culturel', 'sante', 'sport_animaux', 'enfants'],
   }
 }
 const times = {
@@ -46,7 +46,7 @@ const times = {
 }
 const reasons = {
   travail: "🏭",
-  achats: "🛒",
+  achats_culturel_culturel: "🛒",
   sante: "🌡",
   famille: "👨‍👩‍👦",
   handicap: "🧑‍🦽",
