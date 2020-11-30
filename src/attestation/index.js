@@ -321,7 +321,7 @@ initForm()
 
 const ys = {
   travail: 572,
-  achats: 523,
+  achats_culturel_culturel: 523,
   sante: 475,
   famille: 438,
   handicap: 402,
